@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Quote Generator</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -21,10 +22,11 @@
             autocomplete="off"
             required
             class="instruction"
+            id="generator-form"
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="quote-space">Quote will go here</div>
+        <div class="quote-space" id="quote"></div>
       </main>
       <footer>
         This AI project was coded by

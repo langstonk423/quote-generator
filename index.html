@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Quote Generator</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -11,10 +12,10 @@
     <div class="container">
       <header>
         <h1>Quote Generator</h1>
-        <h2>✨ let AI generate a quote, caption, or saying for you ✨</h2>
+        <h2>✨ let AI generate a positive quote for you ✨</h2>
       </header>
       <main>
-        <form>
+        <form id="generator-form">
           <input
             type="text"
             placeholder="Enter your description here"
@@ -22,7 +23,7 @@
             autocomplete="off"
             required
             class="instruction"
-            id="generator-form"
+            id="user-instruction"
           />
           <input type="submit" class="submit-button" />
         </form>

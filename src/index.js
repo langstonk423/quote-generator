@@ -17,6 +17,10 @@ function generateQuote(event) {
     "You are creative and love to provide new ideas, quotes, and fun captions. You are a great writer and have a positive attitude. Your mission is to generate a creative and unique quote, caption, or idea based on the user instructions. Please sign your answer with 'SheCodes AI' inside <a href> element that is linked to 'https://www.shecodes.io' and link should open a new tab in the browser. The signature must be at the end on the line below the quote.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let quoteElement = document.querySelector("#quote");
+  quoteElement.classList.remove("hidden");
+  quoteElement.innerHTML = `<div class="blink">⚡️Generating your positive quote about ${instructionInput.value}...</div>`;
+
   axios.get(apiUrl).then(displayQuote);
 }
 

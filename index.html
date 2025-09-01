@@ -15,19 +15,24 @@
         <h2>✨ let AI generate a positive quote for you ✨</h2>
       </header>
       <main>
-        <form id="generator-form">
-          <input
-            type="text"
-            placeholder="Enter your description here"
-            autofocus
-            autocomplete="off"
-            required
-            class="instruction"
-            id="user-instruction"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="quote-space" id="quote"></div>
+        <div class="form-container">
+          <form id="generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic you'd like a quote about"
+              autofocus
+              autocomplete="off"
+              required
+              class="instruction"
+              id="user-instruction"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+        </div>
+        <div class="hint">
+          e.g. love, friendship, overcoming challenges, self-discovery
+        </div>
+        <div class="quote-space hidden" id="quote"></div>
       </main>
       <footer>
         This AI project was coded by

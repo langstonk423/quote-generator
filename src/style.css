@@ -30,9 +30,12 @@ header {
 }
 
 form {
+  display: flex;
+}
+
+.form-container {
   text-align: center;
   margin-bottom: 20px;
-  display: flex;
 }
 
 .instruction {
@@ -52,11 +55,21 @@ form {
   color: #fff8db;
   border: none;
   border-radius: 6px;
-  font-size: 18px;
-  cursor: crosshair;
+  font-size: 19px;
+  cursor: pointer;
   width: 19%;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding: 10px auto;
+}
+
+.hint {
+  text-align: left;
+  font-size: 13px;
+  color: #5e6e54;
+  margin-top: -16px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  opacity: 0.69;
 }
 
 .quote-space {
@@ -68,21 +81,45 @@ form {
   color: #fff8db;
   line-height: 1.6;
   margin-bottom: 20px;
-  border-left: 6px solid #e6b451;
+  border-left: 6px solid #d2a242;
+}
+
+.hidden {
+  display: none;
 }
 
 a {
-  color: #e6b451;
+  color: #d2a242;
 }
 
 .quote-space strong {
   font-weight: 900;
-  color: #91a5a1;
+  color: #d2a242;
 }
 
 footer {
   text-align: center;
   font-size: 13px;
   color: #5e6e54;
-  margin-top: 40px;
+  margin-top: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
